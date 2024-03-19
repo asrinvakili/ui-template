@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <title>Asrin Vakili</title>
   <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+
+<div id="loading"><img src="../loading.gif" alt="loading"></div>
 
 <div id="page_top"></div>
 
@@ -14,32 +17,65 @@
   <span><a href="#modal_about">About Me</a></span>
 </div>
 
+<!--------------------------------------------------- slider ------------------------------------------------------->
+
+<div id="jquery-slideshow-container">
+
+    <ul id="jquery-slideshow">
+        <li style="background-image: url(../img/slider/a.jpg);">
+            <a href="#">
+                <span>Artificial Intelligence</span>
+            </a>
+        </li>
+        <li style="background-image: url(../img/slider/b.jpg);">
+            <a href="#">
+                <span>Data Analyze</span>
+            </a>
+        </li>
+        <li style="background-image: url(../img/slider/c.png);">
+            <a href="#">
+                <span>Data Mining</span>
+            </a>
+        </li>
+    </ul>
+  <a href="#" id="btn-prev">
+    <i class="fa fa-angle-left"><img src="../img/icons/prev.png" alt="icon"></i>
+    <span>Previous</span>
+  </a>
+  <a href="#" id="btn-next">
+    <i class="fa fa-angle-right"><img src="../img/icons/next.png" alt="icon"></i>
+    <span>Next</span>
+  </a>
+
+</div>
+
+
+<!--------------------------------------------------- end of slider ------------------------------------------------------->
 
 
 <img src="../img/personal.jpg" alt="background" style="width: 100%; height: auto" id="banner">
 
 <div class="modal_wrapper" id="modal_contact">
-
   <div class="modal" >
-    <span class="close_modal"><a href="#close_modal">X</a> </span>
+    <span class="close_modal"><a href="#" onclick="window.close()"><img src="../img/icons/close.png" alt="close"></a> </span>
     This is my number<br>
     This is my name<br>
     This is my email<br>
   </div>
-
 </div>
-<div class="modal_wrapper" id="modal_about">
 
+<div class="modal_wrapper" id="modal_about">
   <div class="modal" >
-    <span class="close_modal"><a href="#close_modal">X</a> </span>
+    <span class="close_modal"><a href="#" onclick="window.close()"><img src="../img/icons/close.png" alt="close"></a> </span>
     My Name is Asrin<br>
     My Name is Asrin<br>
     My Name is Asrin<br>
   </div>
-
 </div>
 
-<a id="jump_down" href="#footer"></a>
+<div id="main_body">
+
+<div id="jump_down"><img id="jump_down_img" src="../img/icons/down.png" alt="down"></div>
 
 <div id="wrapper">
 
@@ -89,8 +125,12 @@
 </div>
 <a id="jump_top" href="#page_top"></a>
 <div id="footer">
-  Copyright 2024 &copy; <a href="http://asrin-vakili.ir" target="_blank">Asrin Vakili</a>
+  Copyright 2024 &copy; <a href="https://asrin-vakili.ir" target="_blank">Asrin Vakili</a>
+</div>
+
 </div>
 
 </body>
+
+<script type="text/javascript" src="../js/app.js"></script>
 </html>

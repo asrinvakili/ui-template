@@ -2,11 +2,13 @@ body, html{
     margin: 0;
     padding: 0;
 }
-*{
+* {
     direction: ltr;
     text-align: justify;
     font-family: "Times New Roman", Tahoma, serif;
+
 }
+
 ul{
     list-style: none;
 }
@@ -15,7 +17,8 @@ ul li{
     background-color: inherit;
 }
 ul li:hover{
-   background-color: #f1f1f1;
+   background-color: #b36eee;
+  transform:scale(1.2);
 }
 a{
   text-decoration: none;
@@ -63,7 +66,7 @@ a:hover{
 }
 #about{
   margin: 30px 5px 500px;
-  background: repeating-linear-gradient(#3355ee,#00bbaa,white);
+  background-color: rgba(20,30,250,1);
   padding: 30px;
   width: 10%;
   outline: black dotted 1px;
@@ -71,7 +74,7 @@ a:hover{
 }
 #menu{
   margin: 30px 5px 500px;
-  background: repeating-linear-gradient(#3355ee,#00bbaa,white);
+  background-color: rgba(20,30,250,1);
   padding: 30px;
   width: 10%;
   outline: black dotted 1px;
@@ -85,7 +88,7 @@ a:hover{
   position: fixed;
   top: 0;
   transition: all 0.5s;
-  z-index: 9999999999;
+  z-index: 999999;
 }
 #navbar:hover{
   background-color: rgba(20,30,250,1);
@@ -132,6 +135,7 @@ a:hover{
 #wrapper{
   background-color: rgba(0,100,150,0.5);
   overflow: hidden;
+
 }
 .modal_wrapper{
   width: 100%;
@@ -144,50 +148,45 @@ a:hover{
   opacity: 0;
 }
 .modal_wrapper:target {
-  z-index: 999999999999;
+  z-index: 999999;
   opacity: 1;
 }
 #footer{
   position: relative;
   bottom: 0;
-  width: 96%;
+  width: 100%;
   padding: 2%;
-  background-color: #ffff00;
+  background-color: rgba(20,30,250,0.5);
   text-align: center;
   transition: all 0.3s;
 }
 #footer:hover{
   font-size: 1.5em;
+  background-color: rgba(20,30,250,1);
 }
-.close_modal a:hover{
-  background-color:gray;
-  color: white;
+.close_modal a img:hover{
+  transform: scale(1.2);
 }
-.close_modal a{
-  text-decoration: none;
-  color: black;
-  background-color: white;
+.close_modal a img{
   display: inline-block;
   width: 2em;
   height: 2em;
   padding: 1%  0.5% 0 0.5%;
-  border-radius: 50%;
-  border: 2px black solid;
-  z-index: 999999999;
+  z-index: 999999;
   position: absolute;
   top: -10px;
-  right: -10px;
+  right: -6px;
 }
 #jump_top{
   color: black;
-  background-image: url("../up-row-1-16.png");
+  background-image: url("../img/icons/up.png");
   background-size: 50px 50px;
   background-repeat: no-repeat;
   display: inline-block;
   width: 50px;
   height: 50px;
   opacity: 1;
-  z-index: 999999999;
+  z-index: 999999;
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -199,7 +198,122 @@ a:hover{
 #jump_down{
   display: inline-block;
   width: 100%;
-  background-color: rgba(150,190,250,0.7);
+  height: 50px;
+  background: repeating-linear-gradient(#3355ee,#00bbaa,white);
   padding: 20px 0;
-  margin-top: 500px;
+  margin-top: 547px;
+
 }
+#jump_down img{
+  position: relative;
+  margin-left: 45%;
+}
+#loading{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #BEADCC;
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+}
+#loading img{
+  width: 35%;
+  height: 40%;
+  position: fixed;
+  left: 30%;
+  top: 20%;
+}
+
+
+ /*
+  * [?] START Slider
+  * *******************************************/
+
+#jquery-slideshow-container {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    top: 50px;
+}
+#jquery-slideshow-container #jquery-slideshow {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#jquery-slideshow-container #jquery-slideshow li {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#jquery-slideshow-container #jquery-slideshow li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    transition: color 0.2s ease-in;
+}
+
+#jquery-slideshow-container #jquery-slideshow li a:hover {
+    color: #ef233c;
+}
+
+
+#jquery-slideshow-container #jquery-slideshow li a span {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0.75em 1.5em;
+        font-size: 1.3em;
+        background: #000000; /* fallback for old browsers */
+        background: rgba(0, 0, 0, 0.8);
+}
+
+/* Vertically center our buttons */
+#jquery-slideshow-container #btn-prev,
+#jquery-slideshow-container #btn-next {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    color: #ffffff;
+    font-size: 4em;
+    line-height: 1;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+}
+
+#jquery-slideshow-container #btn-prev {
+    left: 15px;
+}
+
+#jquery-slideshow-container #btn-next {
+    right: 15px;
+}
+
+    /* hide the text links */
+#jquery-slideshow-container #btn-prev span,
+#jquery-slideshow-container #btn-next span {
+        display: none;
+}
+
+ /* *******************************************
+  * END Slider
+  * */
+
+
+
+
